@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock-Animation</title>
+    <style>
+        .person {
+            width: 400px;
+            height: 400px;
+            border: 2px solid black;
+            position: relative;
+            margin: 0 auto;
+            border-radius: 50%;
+            background-image: url('./clock.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .head {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            background-color: bisque;
+            border-radius: 50%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+
+        .munite {
+            position: absolute;
+            height: 180px;
+            width: 20px;
+            background-color: grey;
+            border-radius: 50%;
+            /* left: 138px;
+            top: 60px; */
+            left: 48%;
+            top: 5%;
+
+            transform: rotate(33deg) translate(-50%, -50%);
+            transform-origin: bottom center;
+            animation: munite 10s linear infinite;
+        }
+        .hours {
+            position: absolute;
+            height: 130px;
+            width: 15px;
+            background-color: grey;
+            border-radius: 50%;
+            /* left: 138px;
+            top: 60px; */
+            left: 48%;
+            top: 19%;
+
+            transform: rotate(33deg) translate(-50%, -50%);
+            transform-origin: bottom center;
+            animation: hours 50s linear infinite;
+        }
+        .second {
+            position: absolute;
+            height: 200px;
+            width: 15px;
+            background-color: grey;
+            border-radius: 50%;
+            /* left: 138px;
+            top: 60px; */
+            left: 48%;
+            top: 0%;
+
+            transform: rotate(33deg) translate(-50%, -50%);
+            transform-origin: bottom center;
+            animation: second 2s linear infinite;
+        }
+
+        @keyframes munite {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes hours {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes second {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="person">
+        <div class="head">
+        
+        </div>
+        <div class="munite">
+            
+        </div>
+        <div class="hours"></div>
+        <div class="second"></div>
+
+    </div>
+</body>
+
+</html>
